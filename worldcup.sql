@@ -21,7 +21,7 @@ SET default_tablespace = '';
 SET default_table_access_method = heap;
 
 --
--- Name: games; Type: TABLE; Schema: public; Owner: marct
+-- Name: games; Type: TABLE; Schema: public; Owner: freecodecamp
 --
 
 CREATE TABLE public.games (
@@ -37,10 +37,10 @@ CREATE TABLE public.games (
 );
 
 
-ALTER TABLE public.games OWNER TO marct;
+ALTER TABLE public.games OWNER TO freecodecamp;
 
 --
--- Name: games_game_id_seq; Type: SEQUENCE; Schema: public; Owner: marct
+-- Name: games_game_id_seq; Type: SEQUENCE; Schema: public; Owner: freecodecamp
 --
 
 CREATE SEQUENCE public.games_game_id_seq
@@ -52,17 +52,17 @@ CREATE SEQUENCE public.games_game_id_seq
     CACHE 1;
 
 
-ALTER SEQUENCE public.games_game_id_seq OWNER TO marct;
+ALTER SEQUENCE public.games_game_id_seq OWNER TO freecodecamp;
 
 --
--- Name: games_game_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: marct
+-- Name: games_game_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: freecodecamp
 --
 
 ALTER SEQUENCE public.games_game_id_seq OWNED BY public.games.game_id;
 
 
 --
--- Name: teams; Type: TABLE; Schema: public; Owner: marct
+-- Name: teams; Type: TABLE; Schema: public; Owner: freecodecamp
 --
 
 CREATE TABLE public.teams (
@@ -71,10 +71,10 @@ CREATE TABLE public.teams (
 );
 
 
-ALTER TABLE public.teams OWNER TO marct;
+ALTER TABLE public.teams OWNER TO freecodecamp;
 
 --
--- Name: teams_team_id_seq; Type: SEQUENCE; Schema: public; Owner: marct
+-- Name: teams_team_id_seq; Type: SEQUENCE; Schema: public; Owner: freecodecamp
 --
 
 CREATE SEQUENCE public.teams_team_id_seq
@@ -86,31 +86,31 @@ CREATE SEQUENCE public.teams_team_id_seq
     CACHE 1;
 
 
-ALTER SEQUENCE public.teams_team_id_seq OWNER TO marct;
+ALTER SEQUENCE public.teams_team_id_seq OWNER TO freecodecamp;
 
 --
--- Name: teams_team_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: marct
+-- Name: teams_team_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: freecodecamp
 --
 
 ALTER SEQUENCE public.teams_team_id_seq OWNED BY public.teams.team_id;
 
 
 --
--- Name: games game_id; Type: DEFAULT; Schema: public; Owner: marct
+-- Name: games game_id; Type: DEFAULT; Schema: public; Owner: freecodecamp
 --
 
 ALTER TABLE ONLY public.games ALTER COLUMN game_id SET DEFAULT nextval('public.games_game_id_seq'::regclass);
 
 
 --
--- Name: teams team_id; Type: DEFAULT; Schema: public; Owner: marct
+-- Name: teams team_id; Type: DEFAULT; Schema: public; Owner: freecodecamp
 --
 
 ALTER TABLE ONLY public.teams ALTER COLUMN team_id SET DEFAULT nextval('public.teams_team_id_seq'::regclass);
 
 
 --
--- Data for Name: games; Type: TABLE DATA; Schema: public; Owner: marct
+-- Data for Name: games; Type: TABLE DATA; Schema: public; Owner: freecodecamp
 --
 
 COPY public.games (year, round, winner, opponent, winner_goals, opponent_goals, game_id, winner_id, opponent_id) FROM stdin;
@@ -118,7 +118,7 @@ COPY public.games (year, round, winner, opponent, winner_goals, opponent_goals, 
 
 
 --
--- Data for Name: teams; Type: TABLE DATA; Schema: public; Owner: marct
+-- Data for Name: teams; Type: TABLE DATA; Schema: public; Owner: freecodecamp
 --
 
 COPY public.teams (team_id, name) FROM stdin;
@@ -126,21 +126,21 @@ COPY public.teams (team_id, name) FROM stdin;
 
 
 --
--- Name: games_game_id_seq; Type: SEQUENCE SET; Schema: public; Owner: marct
+-- Name: games_game_id_seq; Type: SEQUENCE SET; Schema: public; Owner: freecodecamp
 --
 
 SELECT pg_catalog.setval('public.games_game_id_seq', 390, true);
 
 
 --
--- Name: teams_team_id_seq; Type: SEQUENCE SET; Schema: public; Owner: marct
+-- Name: teams_team_id_seq; Type: SEQUENCE SET; Schema: public; Owner: freecodecamp
 --
 
 SELECT pg_catalog.setval('public.teams_team_id_seq', 208, true);
 
 
 --
--- Name: games games_pkey; Type: CONSTRAINT; Schema: public; Owner: marct
+-- Name: games games_pkey; Type: CONSTRAINT; Schema: public; Owner: freecodecamp
 --
 
 ALTER TABLE ONLY public.games
@@ -148,7 +148,7 @@ ALTER TABLE ONLY public.games
 
 
 --
--- Name: teams teams_name_key; Type: CONSTRAINT; Schema: public; Owner: marct
+-- Name: teams teams_name_key; Type: CONSTRAINT; Schema: public; Owner: freecodecamp
 --
 
 ALTER TABLE ONLY public.teams
@@ -156,7 +156,7 @@ ALTER TABLE ONLY public.teams
 
 
 --
--- Name: teams teams_pkey; Type: CONSTRAINT; Schema: public; Owner: marct
+-- Name: teams teams_pkey; Type: CONSTRAINT; Schema: public; Owner: freecodecamp
 --
 
 ALTER TABLE ONLY public.teams
@@ -164,7 +164,7 @@ ALTER TABLE ONLY public.teams
 
 
 --
--- Name: games games_opponent_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: marct
+-- Name: games games_opponent_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: freecodecamp
 --
 
 ALTER TABLE ONLY public.games
@@ -172,7 +172,7 @@ ALTER TABLE ONLY public.games
 
 
 --
--- Name: games games_winner_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: marct
+-- Name: games games_winner_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: freecodecamp
 --
 
 ALTER TABLE ONLY public.games
